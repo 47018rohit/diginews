@@ -8,7 +8,7 @@ export class Navbar extends Component {
     render() {
         return (
             <>
-                <nav className="navbar fixed-top navbar-expand-lg " style={{ backgroundColor: '#293473' }}>
+                <nav className="navbar fixed-top navbar-expand-lg " >
                     <div className="container-fluid">
                         <Link className="navbar-brand" style={{ color: 'yellow' }} to='/'><strong>Digi<span style={{ color: 'orange' }} >News</span></strong></Link>
                         <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
