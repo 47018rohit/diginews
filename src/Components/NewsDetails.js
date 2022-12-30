@@ -1,9 +1,8 @@
-import React, { Component } from 'react'
+import React from 'react'
 
 
-export class NewsDetails extends Component {
-    render() {
-        let { title, discription, imageUrl, url, author, date, source } = this.props
+const NewsDetails =(props)=> {
+        let { title, discription, imageUrl, url, author, date, source } = props
         return (
             <div className="card my-3" style={{ height: '30rem' }}>
                 <span className="position-absolute top-0 translate-middle " style={{left:'90%'}}>
@@ -17,9 +16,7 @@ export class NewsDetails extends Component {
                     <a href={url} className="btn readMore" target='_blank' rel="noopener noreferrer">Read more..</a>
                 </div>
             </div>
-
-        )
-    }
+        )    
 }
 
 export default NewsDetails

@@ -36,3 +36,11 @@ body{
     margin: 100px auto 1%;
     color: aliceblue;
 }
+
+.nav-item{
+    border-radius: .2rem;
+}
+/* 
+.active{
+
+} */
