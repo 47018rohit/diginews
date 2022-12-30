@@ -27,7 +27,7 @@ export class NewsSection extends Component {
 
     async componentDidMount() {
         this.props.setProgress(0)
-        const url = `https://newsapi.org/v2/top-headlines?country=${this.props.country}&category=${this.props.category}&apiKey=${this.props.apiKey}&page=${this.state.page}&pagesize=9`;
+        const url = `https://newsapi.org/v2/top-headlines?country=${this.props.country}&category=${this.props.category}&apiKey=019cb77b61e1487fb97e34a01c6419ed&page=${this.state.page}&pagesize=9`;
         this.props.setProgress(20)
         let response = await fetch(url)
         this.props.setProgress(50)
@@ -41,7 +41,7 @@ export class NewsSection extends Component {
     }
 
     fetchMoreData = async () => {
-        const url = `https://newsapi.org/v2/top-headlines?country=${this.props.country}&category=${this.props.category}&apiKey=${this.props.apiKey}&page=${this.state.page+1}&pagesize=9`;
+        const url = `https://newsapi.org/v2/top-headlines?country=${this.props.country}&category=${this.props.category}&apiKey=019cb77b61e1487fb97e34a01c6419ed&page=${this.state.page+1}&pagesize=9`;
         let response = await fetch(url)
         let newsData = await response.json();
         this.setState({
