@@ -2,11 +2,11 @@ import React from 'react'
 
 
 const NewsDetails =(props)=> {
-        let { title, discription, imageUrl, url, author, date, source } = props
+        let { title, discription, imageUrl, url, author, date,  } = props
         return (
             <div className="card my-3" style={{ height: '30rem' }}>
                 <span className="position-absolute top-0 translate-middle " style={{left:'90%'}}>
-                    <span className="badge bg-info text-dark">{source}</span>
+                    <span className="badge bg-info text-dark">{}</span>
                 </span>
                 <img src={!imageUrl ? "https://cdn.allthings.how/wp-content/uploads/2021/07/allthings.how-how-to-get-classic-context-menu-of-file-explorer-back-in-windows-11-file-explorer-menu-759x427.png?width=600" : imageUrl} className="card-img-top" style={{ overflow: 'auto' }} alt="..." />
                 <h5 className="card-title">{title}</h5>

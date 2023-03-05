@@ -3,8 +3,7 @@ import Navbar from './Components/Navbar'
 import NewsSection from './Components/NewsSection';
 import './App.css';
 import {
-  // BrowserRouter as Router,
-  HashRouter,
+  BrowserRouter,
   Route,
   Routes,
 } from "react-router-dom";
@@ -12,7 +11,7 @@ import LoadingBar from 'react-top-loading-bar'
 
 
 export class App extends Component {
-  apiKey = process.env.REACT_APP_DIGINEWS;
+  // apiKey = process.env.REACT_APP_DIGINEWS;
 
   state={
     progress: 0,
@@ -22,7 +21,7 @@ export class App extends Component {
   }
   render() {
     return (
-      <HashRouter basename='/'>
+      <BrowserRouter basename='/diginews'>
         <Navbar />
         <Routes>
           <Route exact path="/" element={<NewsSection apiKey={this.apiKey} setProgress ={this.setProgress} key="general" country="in" category="general" heading="Top-headlines" />}></Route>
@@ -33,13 +32,14 @@ export class App extends Component {
           <Route exact path="/science" element={<NewsSection apiKey={this.apiKey} setProgress ={this.setProgress} key="science" country="in" category="science" heading="Science" />}></Route>
           <Route exact path="/sports" element={<NewsSection apiKey={this.apiKey} setProgress ={this.setProgress} key="sports" country="in" category="sports" heading="Sports" />}></Route>
           <Route exact path="/technology" element={<NewsSection apiKey={this.apiKey} setProgress ={this.setProgress} key="technology" country="in" category="technology" heading="Technology" />}></Route>
+          
         </Routes>
         <LoadingBar
           height={3}
           color='white'
           progress={this.state.progress}
         />
-      </HashRouter>
+      </BrowserRouter>
     )
   }
 }
